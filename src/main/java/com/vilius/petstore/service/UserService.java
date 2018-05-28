@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @NoArgsConstructor
 public class UserService {
@@ -23,4 +25,12 @@ public class UserService {
     }
 
     public User getUserById(Long id){return userRepository.findById(id).get();}
+
+    public List<User> getUserByName(String name){return userRepository.findByNameOrderById(name);}
+
+    public void updateUser(User user){
+
+    }
+
+
 }

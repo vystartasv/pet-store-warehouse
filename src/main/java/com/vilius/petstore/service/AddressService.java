@@ -19,4 +19,6 @@ public class AddressService {
     }
 
     public Address getAddressById(Long id){ return addressRepository.findById(id).get(); }
+
+    public void deleteAddressById(Long id){addressRepository.deleteById(id);}
 }

@@ -20,7 +20,7 @@ public class User {
 
     private String name;
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String username;
 
     private String surname;
@@ -37,6 +37,7 @@ public class User {
     private Boolean administrator;
 
     public void setId(){ }
+    public void setUsername(){}
 
     public void addAddress(Address address){
         addresses.add(address);
