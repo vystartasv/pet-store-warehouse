@@ -9,6 +9,8 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     User findFirstByOrderByIdDesc();
+
     List<User> findByNameOrderById(String name);
+
     User findUserByUsername(String username);
 }

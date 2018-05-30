@@ -1,6 +1,7 @@
 package com.vilius.petstore.entity;
 
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -29,6 +30,7 @@ public class Pet {
 
     private int age;
 
+
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, updatable = false)
@@ -39,6 +41,7 @@ public class Pet {
     @Column(nullable = false)
     private Calendar updated;
 
-    public void setId(){}
+    public void setId() {
+    }
 
 }

@@ -4,12 +4,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Locale;
 
 @Entity(name = "Address")
 @Data
 @NoArgsConstructor
-@Table(name ="address")
+@Table(name = "address")
 public class Address {
 
     @Id
@@ -30,5 +29,6 @@ public class Address {
     @JoinColumn(name = "user_id")
     private User user;
 
-    public void setId(){}
+    public void setId() {
+    }
 }
